@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Y0CNMFRDD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-7Y0CNMFRDD');
+    </script>
     <meta charset="UTF-8">
     <title>Sisters Who Make Waves 2023</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -21,6 +34,14 @@
         {% endfor %}
         </tbody>
     </table>
+    <div class="fixed-bottom d-flex justify-content-end p-3">
+        <div class="d-flex flex-column">
+            <a href="https://lego.mgtv.com/act/3_8_3/20230414cf2023.html?act_name=20230414cf2023&share_id=HUE2ER51CWA&source=share_20230414cf2023&code=083DCc000ISzVP1T9M200MC5351DCc0w"
+               target="_blank" class="btn btn-primary mb-2">投票点这里</a>
+            <a href="https://github.com/LuStormstout/sisters_who_make_waves_2023" target="_blank"
+               class="btn btn-secondary">项目源代码在这里</a>
+        </div>
+    </div>
 </div>
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 </body>
