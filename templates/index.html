@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sisters Who Make Waves 2023</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>乘风破浪的姐姐 2023</h1>
+    <table class="table table-hover shadow-lg">
+        <tbody>
+        {% for contestant in contestants %}
+        <tr class="{% if loop.index == 1 %}bg-gold{% elif loop.index == 2 %}bg-silver{% elif loop.index == 3 %}bg-bronze{% endif %}">
+            <td>{{ loop.index }}</td>
+            <td>{{ contestant.char_name }}</td>
+            <td><img src="{{ contestant.photo }}" alt="{{ contestant.char_name }}"></td>
+            <td>{{ format_number(contestant.vote_num) }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
