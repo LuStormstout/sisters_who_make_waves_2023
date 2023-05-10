@@ -22,7 +22,7 @@ def index():
     data = json.loads(response.text)
     contestants = data['data']['character_list']
 
-    return render_template('index.html', contestants=contestants, rank=0)
+    return render_template('index.html', contestants=contestants)
 
 
 if __name__ == '__main__':
